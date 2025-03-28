@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タップカウンター</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: linear-gradient(to bottom, #1a1a2e, #16213e);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      margin-top: 20vh;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    #count {
+      font-size: 5em;
+      margin: 20px 0;
+    }
+    button {
+      font-size: 2em;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 12px;
+      background: #0f3460;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #533483;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>タップした回数</h1>
+    <div id="count">0</div>
+    <button onclick="tap()">タップ！</button>
+  </div>
+  <script>
+    let count = 0;
+    function tap() {
+      count++;
+      document.getElementById('count').textContent = count;
+    }
+  </script>
+</body>
+</html>
